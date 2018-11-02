@@ -1,6 +1,5 @@
 package org.wecancodeit.reviewssitefullstack.model;
 
-import java.util.Set;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -20,7 +19,6 @@ public class Review {
 	@Lob
 	private String description;
 
-	@ManyToMany
 	private Tag tag;
 	private Set<Tag> tags;
 

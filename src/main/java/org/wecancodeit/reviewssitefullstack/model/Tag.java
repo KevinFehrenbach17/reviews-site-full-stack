@@ -2,12 +2,12 @@ package org.wecancodeit.reviewssitefullstack.model;
 
 import java.util.Set;
 
+import javax.persistence.Embeddable;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 
-@Entity
 public class Tag {
 
 	@Id
@@ -15,15 +15,3 @@ public class Tag {
 	private Long id;
 	private String name;
 
-	@ManyToMany(mappedBy = "tag")
-	private Set<Review> reviews;
-
-	public String getName() {
-		return name;
-	}
-
-	public Set<Review> getReviews() {
-		return reviews;
-	}
-
-}
